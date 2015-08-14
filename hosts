@@ -1,0 +1,5 @@
+############################### Mesos cluster #################################
+###############################################################################
+#        FQDN        |         Short Hostname         |
+[monokal]
+01.sandbox.monokal.io short_hostname=monokal-sandbox01

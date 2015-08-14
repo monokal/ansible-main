@@ -1,0 +1,6 @@
+---
+
+- hosts:
+    - monokal
+  roles:
+    - monokal-ansible-role-common

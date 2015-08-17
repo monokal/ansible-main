@@ -2,7 +2,7 @@
 ###############################################################################
 #        FQDN        |         Short Hostname         |        SSH address
 [monokal_sandbox]
-01.sandbox.monokal.io short_hostname=monokal-sandbox01 ansible_ssh_host=ssh.01.sandbox.monokal.io
+01.sandbox.monokal.io short_hostname=monokal-sandbox01 ansible_ssh_host=direct.01.sandbox.monokal.io
 
 [monokal:children]
 monokal_sandbox

@@ -1,6 +1,3 @@
 [submodule "roles/monokal-ansible-role-common"]
 	path = roles/monokal-ansible-role-common
 	url = https://github.com/monokal/monokal-ansible-role-common.git
-[submodule "roles/ansible-harden"]
-	path = roles/ansible-harden
-	url = https://github.com/monokal/ansible-harden.git

@@ -3,4 +3,5 @@
 - hosts:
     - monokal
   roles:
+    - monokal-ansible-role-harden
     - monokal-ansible-role-common

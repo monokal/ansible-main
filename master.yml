@@ -1,5 +1,9 @@
 ---
 
+# Name:         master.yaml
+# Author:       Daniel Middleton (monokal) <d@monokal.io>
+# Description:  Ansible master Playbook for monokal hosts.
+
 - hosts:
     - monokal
   roles:

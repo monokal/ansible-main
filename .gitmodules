@@ -6,3 +6,7 @@
 	path = roles/monokal-ansible-role-harden
 	url = https://github.com/monokal/monokal-ansible-role-harden.git
     branch = master
+[submodule "roles/monokal-ansible-role-www"]
+	path = roles/monokal-ansible-role-www
+	url = https://github.com/monokal/monokal-ansible-role-www.git
+	branch = master

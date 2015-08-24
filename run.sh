@@ -5,4 +5,4 @@ if ! hash ansible 2>/dev/null; then
     exit 1
 fi
 
-ansible-playbook -i hosts -u root master.yml
+ANSIBLE_SSH_PIPELINING=True ansible-playbook -i hosts -u root master.yml

@@ -10,3 +10,15 @@
 	path = roles/monokal-ansible-role-www
 	url = https://github.com/monokal/monokal-ansible-role-www.git
 	branch = master
+[submodule "roles/monokal-ansible-role-mesos-common"]
+	path = roles/monokal-ansible-role-mesos-common
+	url = https://github.com/monokal/monokal-ansible-role-mesos-common.git
+	branch = master
+[submodule "roles/monokal-ansible-role-mesos-master"]
+	path = roles/monokal-ansible-role-mesos-master
+	url = https://github.com/monokal/monokal-ansible-role-mesos-master.git
+	branch = master
+[submodule "roles/monokal-ansible-role-mesos-slave"]
+	path = roles/monokal-ansible-role-mesos-slave
+	url = https://github.com/monokal/monokal-ansible-role-mesos-slave.git
+	branch = master

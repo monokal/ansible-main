@@ -10,3 +10,8 @@
     - monokal-ansible-role-harden
     - monokal-ansible-role-common
     - monokal-ansible-role-www
+
+#- hosts:
+#    - monokal_masters
+#  roles:
+#    - monokal-ansible-role-mesos-common

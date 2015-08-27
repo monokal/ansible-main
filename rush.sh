@@ -12,7 +12,7 @@ Usage: $0 [option]
     
     Options:
         -r  Run the master playbook.
-        -a  Update everything, overwriting all local changes.
+        -u  Update everything, overwriting all local changes.
         -s  Display the git status of everything.
         -h  Display usage.
 
@@ -56,7 +56,7 @@ case "$1" in
     '-r')
         run_playbook
         ;;
-    '-a')
+    '-u')
         hard_update_all
         ;;
     '-s')

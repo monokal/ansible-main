@@ -1,8 +1,24 @@
-#################################### monokal ##################################
-###############################################################################
-#        FQDN        |         Short Hostname         |        SSH address
-[monokal_masters]
-01.master.monokal.io short_hostname=monokal-master01 ansible_ssh_host=direct.01.master.monokal.io
+# monokal - Mesos Slaves
+
+#[monokal_mesos_slaves]
+#01.slave.monokal.io
+#02.slave.monokal.io
+#03.slave.monokal.io
+
+# monokal - Mesos Masters
+
+[monokal_mesos_masters]
+01.master.monokal.io
+#02.master.monokal.io
+#03.master.monokal.io
+
+# monokal - Mesos All
+
+[monokal_mesos:children]
+monokal_mesos_masters
+#monokal_mesos_slaves
+
+# monokal - All
 
 [monokal:children]
-monokal_masters
+monokal_mesos

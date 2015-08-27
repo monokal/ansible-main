@@ -1,0 +1,45 @@
+---
+
+# Mesos
+
+mesos_cluster_name:                  monokal
+mesos_port:                          80
+mesos_quorum:                        2
+mesos_executor_registration_timeout: 5mins
+
+# Marathon
+
+marathon_task_launch_timeout: 300000
+marathon_logging_level:       debug
+
+# Zookeeper
+
+zk_client_port:          2181
+zk_leader_client_port:   2888
+zk_leader_election_port: 3888
+zk_tick_time:            2000
+zk_init_limit:           10
+zk_sync_limit:           5
+zk_data_dir:             /var/lib/zookeeper
+
+# Mesos-DNS
+
+mdns_port:            53
+mdns_refresh_seconds: 60
+mdns_ttl:             60
+mdns_domain:          mesos.monokal.io
+mdns_ns:              ns1
+mdns_resolver_1:      8.8.8.8
+mdns_resolver_2:      8.8.4.4
+mdns_timeout:         5
+mdns_soam_name:       root.ns1.mesos.monokal.io
+mdns_soar_name:       ns1.mesos.monokal.io
+mdns_soa_refresh:     60
+mdns_soa_retry:       600
+mdns_soa_expire:      86400
+mdns_soam_inttl:      60
+mdns_dns_on:          true
+mdns_httpon:          true
+mdns_http_port:       8053
+mdns_external_on:     false
+mdns_recurseon:       true

@@ -22,3 +22,7 @@
 	path = roles/monokal-ansible-role-mesos-slave
 	url = https://github.com/monokal/monokal-ansible-role-mesos-slave.git
 	branch = master
+[submodule "roles/monokal-ansible-role-metrics"]
+	path = roles/monokal-ansible-role-metrics
+	url = https://github.com/monokal/monokal-ansible-role-metrics.git
+	branch = master

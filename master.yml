@@ -12,6 +12,7 @@
     - monokal-ansible-role-harden
     - monokal-ansible-role-common
     - monokal-ansible-role-www
+    - monokal-ansible-role-metrics
 
 # monokal - Mesos All
 
@@ -20,12 +21,12 @@
   roles:
     - monokal-ansible-role-mesos-common
 
-# monokal - Mesos Masters
-
-- hosts:
-    - monokal_mesos_masters
-  roles:
-    - monokal-ansible-role-mesos-master
+## monokal - Mesos Masters
+#
+#- hosts:
+#    - monokal_mesos_masters
+#  roles:
+#    - monokal-ansible-role-mesos-master
 
 ## monokal - Mesos Slaves
 #

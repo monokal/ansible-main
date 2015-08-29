@@ -1,9 +1,11 @@
 #!/bin/bash
 
-if ! hash ansible-playbook 2>/dev/null; then
-    echo -e "\nAnsible is not installed. See: http://docs.ansible.com/ansible/intro_installation.html\n"
-    exit 1
-fi
+precheck() {
+  if ! hash ansible-playbook > /dev/null 2>&1; then
+      echo -e "\nAnsible is not installed. See: http://docs.ansible.com/ansible/intro_installation.html\n"
+      exit 1
+  fi
+}
 
 usage() {
     cat << EOF
@@ -11,12 +13,14 @@ usage() {
 Usage: $0 [option]
     
     Options:
-        -r  Run the master playbook.
-        -u  Update everything, overwriting all local changes.
-        -s  Display the git status of everything.
-        -h  Display usage.
+        -r | --run         Run the master playbook.
+        -u | --update      Update everything, overwriting all local changes.
+        -s | --status      Display the git status of everything.
+        -h | --help        Display usage.
 
 EOF
+
+  exit 1
 }
 
 hard_update_submodules() {
@@ -33,12 +37,12 @@ hard_update_all() {
 }
 
 check_status_submodules() {
-    git submodule foreach git fetch -a && \
+    git submodule foreach git fetch -a > /dev/null 2>&1 && \
     git submodule foreach git status
 }
 
 check_status_all() {
-    git fetch -a && \
+    git fetch -a > /dev/null 2>&1 && \
     git status && \
     check_status_submodules
 }
@@ -49,21 +53,21 @@ run_playbook() {
 
 if [ $# -ne 1 ]; then
     usage
-    exit 1
 fi
 
+precheck
+
 case "$1" in
-    '-r')
+    '-r'|'--run')
         run_playbook
         ;;
-    '-u')
+    '-u'|'--update')
         hard_update_all
         ;;
-    '-s')
+    '-s'|'--status')
         check_status_all
         ;;
     *)
         usage
-        exit 1
         ;;
 esac

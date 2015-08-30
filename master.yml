@@ -1,9 +1,5 @@
 ---
 
-# Name:        master.yaml
-# Author:      Daniel Middleton (monokal) <d@monokal.io>
-# Description: Ansible master Playbook for monokal hosts.
-
 # monokal - All
 
 - hosts:
@@ -14,20 +10,20 @@
     - monokal-ansible-role-metrics
 #    - monokal-ansible-role-www
 
-## monokal - Mesos All
-#
-#- hosts:
-#    - monokal_mesos
-#  roles:
-#    - monokal-ansible-role-mesos-common
-#
-## monokal - Mesos Masters
-#
-#- hosts:
-#    - monokal_mesos_masters
-#  roles:
-#    - monokal-ansible-role-mesos-master
-#
+# monokal - Mesos All
+
+- hosts:
+    - monokal_mesos
+  roles:
+    - monokal-ansible-role-mesos-common
+
+# monokal - Mesos Masters
+
+- hosts:
+    - monokal_mesos_masters
+  roles:
+    - monokal-ansible-role-mesos-master
+
 ## monokal - Mesos Slaves
 #
 #- hosts:

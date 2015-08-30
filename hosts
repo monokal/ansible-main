@@ -9,8 +9,8 @@
 
 [monokal_mesos_masters]
 01.master.monokal.io
-#02.master.monokal.io
-#03.master.monokal.io
+02.master.monokal.io
+03.master.monokal.io
 
 # monokal - Mesos All
 

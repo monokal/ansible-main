@@ -26,3 +26,15 @@
 	path = roles/monokal-ansible-role-metrics
 	url = https://github.com/monokal/monokal-ansible-role-metrics.git
 	branch = master
+[submodule "roles/monokal-ansible-role-k8s-common"]
+	path = roles/monokal-ansible-role-k8s-common
+	url = https://github.com/monokal/monokal-ansible-role-k8s-common.git
+	branch = master
+[submodule "roles/monokal-ansible-role-k8s-master"]
+	path = roles/monokal-ansible-role-k8s-master
+	url = https://github.com/monokal/monokal-ansible-role-k8s-master.git
+	branch = master
+[submodule "roles/monokal-ansible-role-k8s-node"]
+	path = roles/monokal-ansible-role-k8s-node
+	url = https://github.com/monokal/monokal-ansible-role-k8s-node.git
+	branch = master

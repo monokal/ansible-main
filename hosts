@@ -18,6 +18,11 @@
 monokal_mesos_masters
 #monokal_mesos_slaves
 
+# monokal - Docker All
+
+#[docker:children]
+#monokal_mesos_slaves
+
 # monokal - All
 
 [monokal:children]

@@ -38,3 +38,7 @@
 	path = roles/monokal-ansible-role-k8s-node
 	url = https://github.com/monokal/monokal-ansible-role-k8s-node.git
 	branch = master
+[submodule "roles/monokal-ansible-role-docker-registry"]
+	path = roles/monokal-ansible-role-docker-registry
+	url = https://github.com/monokal/monokal-ansible-role-docker-registry.git
+	branch = master

@@ -1,0 +1,7 @@
+---
+
+# Docker
+
+docker_registry_port:     5000
+docker_registry_username: "testuser"
+docker_registry_password: "testpass"

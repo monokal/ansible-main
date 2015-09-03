@@ -42,3 +42,7 @@
 	path = roles/monokal-ansible-role-docker-registry
 	url = https://github.com/monokal/monokal-ansible-role-docker-registry.git
 	branch = master
+[submodule "roles/monokal-ansible-role-docker-common"]
+	path = roles/monokal-ansible-role-docker-common
+	url = https://github.com/monokal/monokal-ansible-role-docker-common.git
+	branch = master

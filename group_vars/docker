@@ -2,6 +2,7 @@
 
 # Docker
 
-docker_registry_port:     5000
-docker_registry_username: "testuser"
-docker_registry_password: "testpass"
+docker_registry_port:      5000
+docker_registry_username:  "testuser"
+docker_registry_password:  "testpass"
+docker_registry_data_path: "/opt/docker_registry/data"

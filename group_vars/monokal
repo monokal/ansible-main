@@ -2,4 +2,8 @@
 
 # NewRelic
 
-newrelic_license_key: <HIDDEN>
+newrelic_license_key: "<HIDDEN>"
+
+# Fail2Ban
+
+fail2ban_email_addr: "<HIDDEN>"

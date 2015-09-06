@@ -7,14 +7,21 @@
   roles:
     - monokal-ansible-role-harden
     - monokal-ansible-role-common
-    - monokal-ansible-role-metrics
     #- monokal-ansible-role-www
+
+# monokal - Desktops
+
+- hosts:
+    - monokal_desktops
+  roles:
+    - monokal-ansible-role-docker-common
 
 # monokal - Mesos All
 
 - hosts:
     - monokal_mesos
   roles:
+    - monokal-ansible-role-metrics
     - monokal-ansible-role-mesos-common
 
 # monokal - Mesos Masters

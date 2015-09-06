@@ -1,3 +1,8 @@
+# monokal - Desktops
+
+[monokal_desktops]
+01.desktop.monokal.io
+
 # monokal - Mesos Slaves
 
 #[monokal_mesos_slaves]
@@ -26,4 +31,5 @@ monokal_mesos_masters
 # monokal - All
 
 [monokal:children]
+monokal_desktops
 monokal_mesos

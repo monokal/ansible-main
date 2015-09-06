@@ -13,6 +13,7 @@ usage() {
 Usage: $0 [option]
     
     Options:
+        -c | --check       Run the master playbook but make no changes.
         -r | --run         Run the master playbook.
         -u | --update      Update everything, overwriting all local changes.
         -s | --status      Display the git status of everything.
@@ -47,8 +48,12 @@ check_status_all() {
     check_status_submodules
 }
 
+check_playbook() {
+    ANSIBLE_SSH_PIPELINING=True ansible-playbook --check --ask-become-pass -i hosts master.yml
+}
+
 run_playbook() {
-    ANSIBLE_SSH_PIPELINING=True ansible-playbook -i hosts -u root master.yml
+    ANSIBLE_SSH_PIPELINING=True ansible-playbook --ask-become-pass -i hosts master.yml
 }
 
 if [ $# -ne 1 ]; then
@@ -58,6 +63,9 @@ fi
 precheck
 
 case "$1" in
+    '-c'|'--check')
+        check_playbook
+        ;;
     '-r'|'--run')
         run_playbook
         ;;
